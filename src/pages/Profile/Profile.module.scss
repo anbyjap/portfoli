@@ -1,0 +1,39 @@
+@import "../../colors";
+
+.profile_wrapper {
+  color: $font-color;
+  background-image: url("../../../public/Happy-Person-Transparent.png");
+  background-repeat: no-repeat;
+  background-size: 500px 600px;
+  background-position: 150% -40%;
+
+  .profile_content {
+    font-size: x-large;
+    font-weight: 800;
+  }
+
+  .name_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+  .personal_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    flex-wrap: wrap;
+    .profile_list {
+      font-weight: 600;
+      font-size: large;
+      color: $font-color;
+    }
+  }
+  .content_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .profile_title {
+    font-weight: bold;
+    color: $font-color;
+  }
+}

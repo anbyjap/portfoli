@@ -1,4 +1,5 @@
-import { Box, Typography } from "@material-ui/core";
+import { Box } from "@material-ui/core";
+import styles from "./TabPanel.module.scss";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -6,22 +7,17 @@ interface TabPanelProps {
   value: number;
 }
 
-function TabPanel(props: TabPanelProps) {
+const TabPanel = (props: TabPanelProps) => {
   const { children, value, index, ...other } = props;
 
   return (
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
+      id={`tabpanel-${index}`}
+      aria-labelledby={`tab-${index}`}
       {...other}
-      style={{
-        width: "90%",
-        height: "100%",
-        backgroundColor: "blue",
-        borderRadius: "30px",
-      }}
+      className={styles.tabPanel}
     >
       {value === index && (
         <Box
@@ -31,11 +27,11 @@ function TabPanel(props: TabPanelProps) {
             borderRadius: 5,
           }}
         >
-          <Typography style={{ padding: 30 }}>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>
   );
-}
+};
 
 export default TabPanel;
