@@ -1,7 +1,8 @@
 import { Tab, Tabs } from "@mui/material";
 import { SyntheticEvent, useState } from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import styles from "./Home.module.scss";
+import CodeIcon from "@mui/icons-material/Code";
+import "./Home.scss";
 import TabPanel from "../../components/TabPanel/TabPanel";
 import Profile from "../Profile/Profile";
 
@@ -11,8 +12,8 @@ const Home = () => {
     setTabIndex(Number(value));
   };
   return (
-    <div className={styles.home_wrapper}>
-      <div className={styles.card_wrapper}>
+    <div className="home_wrapper">
+      <div className="card_wrapper">
         <TabPanel value={0} index={tabIndex}>
           <Profile />
         </TabPanel>
@@ -25,7 +26,7 @@ const Home = () => {
       </div>
       <Tabs value={tabIndex} onChange={handleChange} orientation="vertical">
         <Tab icon={<AccountCircleIcon />} value={0} />
-        <Tab icon={<AccountCircleIcon />} value={1} />
+        <Tab icon={<CodeIcon />} value={1} />
         <Tab icon={<AccountCircleIcon />} value={2} />
       </Tabs>
     </div>

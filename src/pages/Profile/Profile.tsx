@@ -1,34 +1,33 @@
-import styles from "../Profile/Profile.module.scss";
+import "./Profile.scss";
 
 const Profile = () => {
   return (
-    <div className={styles.profile_wrapper}>
-      <div className={styles.name_wrapper}>
+    <div className="profile_wrapper">
+      <h1>Profile</h1>
+      <div className="name_wrapper">
         <div>
-          <p className={styles.profile_title}>FirstName</p>
-          <p className={styles.profile_content}>Haruki</p>
+          <p className="profile_title">FirstName</p>
+          <p className="profile_content">Haruki</p>
         </div>
         <div>
-          <p className={styles.profile_title}>LastName</p>
-          <p className={styles.profile_content}>Ambai</p>
+          <p className="profile_title">LastName</p>
+          <p className="profile_content">Ambai</p>
         </div>
       </div>
-      <div className={styles.personal_wrapper}>
+      <div className="name_wrapper">
         <div>
-          <p className={styles.profile_title}>Date of Birth</p>
-          <p className={styles.profile_content}> 29/03/2001</p>
+          <p className="profile_title">Date of Birth</p>
+          <p className="profile_content"> 29/03/2001</p>
         </div>
         <div>
-          <p className={styles.profile_title}>Age</p>
-          <p className={styles.profile_content}> 21</p>
+          <p className="profile_title">Nationality</p>
+          <p className="profile_content"> Japan</p>
         </div>
+      </div>
+      <div className="personal_wrapper">
         <div>
-          <p className={styles.profile_title}>Nationality</p>
-          <p className={styles.profile_content}> Japan</p>
-        </div>
-        <div>
-          <p className={styles.profile_title}>Experience</p>
-          <ul className={styles.profile_list}>
+          <p className="profile_title">Experience</p>
+          <ul className="profile_list">
             <li>+ 1 year of React Web Development</li>
             <li>
               + 1 year of AWS Development
@@ -38,18 +37,11 @@ const Profile = () => {
           </ul>
         </div>
       </div>
-      <div className={styles.content_wrapper}>
+      <div className="content_wrapper">
         <div>
-          <p className={styles.profile_title}>Education</p>
-          <p className={styles.profile_content}>
+          <p className="profile_title">Education</p>
+          <p className="profile_content">
             Bachelar of Computer Engeneering, University of Aizu
-          </p>
-        </div>
-        <div>
-          <p className={styles.profile_title}>Projects</p>
-          <p className={styles.profile_content}>
-            COIAS, stands for "Come On Impacting ASteroid", is web application
-            for finding new asteroid
           </p>
         </div>
       </div>

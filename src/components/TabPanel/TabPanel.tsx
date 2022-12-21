@@ -1,5 +1,5 @@
 import { Box } from "@material-ui/core";
-import styles from "./TabPanel.module.scss";
+import "./TabPanel.scss";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -17,7 +17,7 @@ const TabPanel = (props: TabPanelProps) => {
       id={`tabpanel-${index}`}
       aria-labelledby={`tab-${index}`}
       {...other}
-      className={styles.tabPanel}
+      className="tabPanel"
     >
       {value === index && (
         <Box
