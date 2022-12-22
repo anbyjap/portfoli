@@ -14,13 +14,13 @@ const Home = () => {
   return (
     <div className="home_wrapper">
       <div className="card_wrapper">
-        <TabPanel value={0} index={tabIndex}>
+        <TabPanel title="Profile" value={0} index={tabIndex}>
           <Profile />
         </TabPanel>
-        <TabPanel value={1} index={tabIndex}>
+        <TabPanel title="Projects" value={1} index={tabIndex}>
           bbbbbbbbbbbbbbbb
         </TabPanel>
-        <TabPanel value={2} index={tabIndex}>
+        <TabPanel title="Contacts" value={2} index={tabIndex}>
           ccccccccccccccccccccc
         </TabPanel>
       </div>

@@ -2,39 +2,24 @@
 
 .profile_wrapper {
   color: $font-color;
-  background-image: url("../../../public/Happy-Person-Transparent.png");
-  background-repeat: no-repeat;
-  background-size: 60%;
-  background-position: right 0% top 0%;
-  padding: 2%;
-
-  .profile_content {
-    font-size: x-large;
-    font-weight: 800;
-  }
-
-  .name_wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
-  }
+  padding: 0 40px;
   .personal_wrapper {
     display: flex;
-    justify-content: space-between;
-    width: 60%;
-    flex-wrap: wrap;
+    flex-direction: column;
     .profile_list {
-      font-weight: 600;
-      font-size: large;
+      font-weight: 800;
+      font-size: x-large;
       color: $font-color;
     }
   }
-  .content_wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
+
   .profile_title {
     font-weight: bold;
     color: $font-color;
+  }
+  .profile_content {
+    font-size: x-large;
+    font-weight: 800;
+    padding-left: 5%;
   }
 }

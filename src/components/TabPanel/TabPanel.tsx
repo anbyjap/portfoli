@@ -1,14 +1,14 @@
-import { Box } from "@material-ui/core";
 import "./TabPanel.scss";
 
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
+  title: string;
 }
 
 const TabPanel = (props: TabPanelProps) => {
-  const { children, value, index, ...other } = props;
+  const { children, value, index, title, ...other } = props;
 
   return (
     <div
@@ -20,15 +20,10 @@ const TabPanel = (props: TabPanelProps) => {
       className="tabPanel"
     >
       {value === index && (
-        <Box
-          sx={{
-            width: "100%",
-            height: "80vh",
-            borderRadius: 5,
-          }}
-        >
+        <div>
+          <h1 className="title">{title}</h1>
           {children}
-        </Box>
+        </div>
       )}
     </div>
   );

@@ -1,5 +1,9 @@
 $font-family: "Consolas", monaco, monospace;
 
+* {
+  margin: 0;
+}
+
 body {
   margin: 0;
   font-family: $font-family !important;
