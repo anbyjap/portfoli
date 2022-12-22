@@ -3,8 +3,16 @@ import "./Profile.scss";
 
 const Profile = () => {
   return (
-    <Grid container className="profile_wrapper">
-      <Grid container sm={9} md={9}>
+    <Grid container rowGap={3} className="profile_wrapper">
+      <Grid container columnSpacing={1} xs={4} sm={4} md={4}>
+        <img
+          style={{ borderRadius: "50%" }}
+          height="130px"
+          width="130px"
+          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
+        />
+      </Grid>
+      <Grid container columnSpacing={1} rowGap={3} xs={9} sm={8} md={8}>
         <Grid item sm={6} md={6}>
           <p className="profile_title">FirstName</p>
           <p className="profile_content">Haruki</p>
@@ -22,25 +30,25 @@ const Profile = () => {
           <p className="profile_content"> Japan</p>
         </Grid>
       </Grid>
-      <Grid container sm={3} md={3}>
-        aaa
-      </Grid>
+
       <Grid container className="personal_wrapper">
         <p className="profile_title">Experience</p>
         <ul className="profile_list">
-          <li>+ 1 year of React Web Development</li>
+          <li>+ 1 year React Web Development</li>
           <li>
-            + 1 year of AWS Development
+            + 1 year AWS Development
             <br />
             (lambda, RDS, API GateWay...)
           </li>
         </ul>
       </Grid>
       <Grid container>
-        <p className="profile_title">Education</p>
-        <p className="profile_content">
-          Bachelar of Computer Engeneering, University of Aizu
-        </p>
+        <Grid item>
+          <p className="profile_title">Education</p>
+          <p className="profile_content">
+            Bachelar of Computer Engeneering, University of Aizu
+          </p>
+        </Grid>
       </Grid>
     </Grid>
   );

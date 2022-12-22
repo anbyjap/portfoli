@@ -2,13 +2,14 @@
 
 .profile_wrapper {
   color: $font-color;
-  padding: 0 40px;
+  padding: 8% 10%;
+
   .personal_wrapper {
     display: flex;
     flex-direction: column;
     .profile_list {
-      font-weight: 800;
-      font-size: x-large;
+      font-weight: 700;
+      font-size: large;
       color: $font-color;
     }
   }
