@@ -3,7 +3,7 @@
 .project_wrapper {
   color: $font-color;
   background-color: transparent;
-  overflow: auto;
+  overflow-y: auto;
 
   .skills_wrapper {
     display: flex;

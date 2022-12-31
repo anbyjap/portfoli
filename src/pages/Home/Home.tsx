@@ -2,10 +2,12 @@ import { Tab, Tabs } from "@mui/material";
 import { SyntheticEvent, useState } from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CodeIcon from "@mui/icons-material/Code";
+import EmailIcon from "@mui/icons-material/Email";
 import "./Home.scss";
 import TabPanel from "../../components/TabPanel/TabPanel";
 import Profile from "../Profile/Profile";
 import Projects from "../Projects/Projects";
+import Contacts from "../Contacts/Contacts";
 
 const Home = () => {
   const [tabIndex, setTabIndex] = useState(Number);
@@ -22,7 +24,7 @@ const Home = () => {
           <Projects />
         </TabPanel>
         <TabPanel title="Contacts" value={2} index={tabIndex}>
-          ccccccccccccccccccccc
+          <Contacts />
         </TabPanel>
       </div>
       <Tabs
@@ -33,7 +35,7 @@ const Home = () => {
       >
         <Tab icon={<AccountCircleIcon />} value={0} />
         <Tab icon={<CodeIcon />} value={1} />
-        <Tab icon={<AccountCircleIcon />} value={2} />
+        <Tab icon={<EmailIcon />} value={2} />
       </Tabs>
     </div>
   );
