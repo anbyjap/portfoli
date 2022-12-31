@@ -3,12 +3,16 @@ import "./Profile.scss";
 
 const Profile = () => {
   return (
-    <Grid container rowGap={3} className="profile_wrapper">
-      <Grid container columnSpacing={1} xs={4} sm={4} md={4}>
+    <Grid container rowGap={7} className="profile_wrapper">
+      <Grid container xs={4} sm={4} md={4}>
         <img
-          style={{ borderRadius: "50%" }}
-          height="130px"
-          width="130px"
+          style={{
+            borderRadius: "50%",
+            display: "flex",
+            justifyContent: "center",
+          }}
+          height="150px"
+          width="150px"
           src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
         />
       </Grid>
@@ -31,7 +35,7 @@ const Profile = () => {
         </Grid>
       </Grid>
 
-      <Grid container className="personal_wrapper">
+      <Grid container rowGap={3} className="personal_wrapper">
         <p className="profile_title">Experience</p>
         <ul className="profile_list">
           <li>+ 1 year React Web Development</li>

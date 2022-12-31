@@ -5,6 +5,7 @@ import CodeIcon from "@mui/icons-material/Code";
 import "./Home.scss";
 import TabPanel from "../../components/TabPanel/TabPanel";
 import Profile from "../Profile/Profile";
+import Projects from "../Projects/Projects";
 
 const Home = () => {
   const [tabIndex, setTabIndex] = useState(Number);
@@ -18,13 +19,18 @@ const Home = () => {
           <Profile />
         </TabPanel>
         <TabPanel title="Projects" value={1} index={tabIndex}>
-          bbbbbbbbbbbbbbbb
+          <Projects />
         </TabPanel>
         <TabPanel title="Contacts" value={2} index={tabIndex}>
           ccccccccccccccccccccc
         </TabPanel>
       </div>
-      <Tabs value={tabIndex} onChange={handleChange} orientation="vertical">
+      <Tabs
+        value={tabIndex}
+        onChange={handleChange}
+        variant="fullWidth"
+        orientation="vertical"
+      >
         <Tab icon={<AccountCircleIcon />} value={0} />
         <Tab icon={<CodeIcon />} value={1} />
         <Tab icon={<AccountCircleIcon />} value={2} />

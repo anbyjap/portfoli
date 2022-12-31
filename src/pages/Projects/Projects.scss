@@ -1,0 +1,32 @@
+@import "../../colors";
+.css-1f8sh1y {
+  overflow: auto;
+}
+.css-ohwg9z {
+  height: 100%;
+}
+.project_wrapper {
+  color: $font-color;
+
+  .project_wrapper {
+    display: flex;
+    flex-direction: column;
+    .project_list {
+      font-weight: 700;
+      font-size: large;
+      color: $font-color;
+    }
+  }
+
+  .project_title {
+    color: $font-color;
+    font-weight: 800;
+    margin: auto 0;
+  }
+  .project_content {
+    font-size: large;
+    font-weight: 700;
+    padding-left: 5%;
+    line-height: 170%;
+  }
+}

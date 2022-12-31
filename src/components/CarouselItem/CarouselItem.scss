@@ -1,0 +1,45 @@
+@import "../../colors";
+
+.project_wrapper {
+  color: $font-color;
+  background-color: transparent;
+  overflow: auto;
+
+  .skills_wrapper {
+    display: flex;
+    flex-direction: column;
+    .skills_list {
+      font-weight: 700;
+      font-size: large;
+      color: $font-color;
+      @media (max-width: 960px) {
+        padding-left: 10%;
+      }
+    }
+  }
+
+  .project_title {
+    color: $font-color;
+    font-weight: 800;
+  }
+  .project_content {
+    font-size: large;
+    font-weight: 700;
+    padding-left: 5%;
+    line-height: 170%;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: gray;
+    outline: 1px solid transparent;
+  }
+}

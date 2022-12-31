@@ -14,3 +14,9 @@
   justify-content: right;
   align-items: center;
 }
+
+@media (max-width: 960px) {
+  .css-y0fr9s-MuiButtonBase-root-MuiTab-root {
+    min-width: 8% !important;
+  }
+}

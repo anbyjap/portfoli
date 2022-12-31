@@ -20,9 +20,11 @@ const TabPanel = (props: TabPanelProps) => {
       className="tabPanel"
     >
       {value === index && (
-        <div>
-          <h1 className="title">{title}</h1>
-          {children}
+        <div className="tabpanel_wrapper">
+          <div className="title_wrapper">
+            <h1 className="title">{title}</h1>
+          </div>
+          <div className="child_wrapper">{children}</div>
         </div>
       )}
     </div>
