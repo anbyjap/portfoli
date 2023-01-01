@@ -10,15 +10,17 @@
 
   .tabpanel_wrapper {
     height: 100%;
-    margin: 5% 5%;
 
     .title_wrapper {
-      height: 10%;
+      margin: 0 5%;
+      height: 15%;
       display: flex;
       align-items: center;
     }
 
     .child_wrapper {
+      margin: 0 5%;
+
       height: 85%;
       overflow: auto;
     }

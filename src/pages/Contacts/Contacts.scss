@@ -2,7 +2,7 @@
   padding: 5% 5%;
   height: 100%;
   .icon {
-    font-size: 500%;
+    font-size: xx-large;
   }
   @media (max-width: 414px) {
     display: flex;
@@ -10,12 +10,10 @@
   @media (min-width: 414px) {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
   }
 
   .contact_content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 }

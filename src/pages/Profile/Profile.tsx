@@ -1,20 +1,57 @@
-import { Grid } from "@mui/material";
+import { Email, LinkedIn, GitHub } from "@material-ui/icons";
+import { Grid, Link } from "@mui/material";
 import "./Profile.scss";
 
 const Profile = () => {
   return (
     <Grid container rowGap={7} className="profile_wrapper">
-      <Grid container xs={4} sm={4} md={4}>
-        <img
-          style={{
-            borderRadius: "50%",
-            display: "flex",
-            justifyContent: "center",
-          }}
-          height="150px"
+      <Grid container xs={7} sm={4} md={4} flexDirection="row">
+        <Grid container>
+          <img
+            style={{
+              borderRadius: "50%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+            height="150px"
+            width="150px"
+            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
+          />
+        </Grid>
+        <Grid
+          container
+          justifyContent="center"
           width="150px"
-          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
-        />
+          className="contact_wrapper"
+        >
+          <Grid item>
+            <Link
+              href="https://github.com/anbyjap"
+              className="contact_content"
+              color="inherit"
+            >
+              <Email className="icon" />
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link
+              href="https://github.com/anbyjap"
+              className="contact_content"
+              color="inherit"
+            >
+              <GitHub className="icon" />
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link
+              href="https://www.linkedin.com/in/haruki-ambai-76a66025b/"
+              className="contact_content"
+              color="inherit"
+            >
+              <LinkedIn className="icon" />
+            </Link>
+          </Grid>
+        </Grid>
       </Grid>
       <Grid container columnSpacing={1} rowGap={3} xs={9} sm={8} md={8}>
         <Grid item sm={6} md={6}>
