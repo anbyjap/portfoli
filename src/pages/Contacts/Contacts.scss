@@ -1,19 +1,25 @@
 .contact_wrapper {
-  padding: 5% 5%;
+  padding: 0 5%;
   height: 100%;
-  .icon {
-    font-size: xx-large;
-  }
-  @media (max-width: 414px) {
-    display: flex;
-  }
-  @media (min-width: 414px) {
-    display: flex;
-    flex-direction: column;
+
+  input,
+  textarea {
+    border-radius: 5px;
+    font-size: large;
   }
 
-  .contact_content {
+  .content_wrapper {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+  }
+  .text_wrapper {
+    height: 55vh;
+    .text_area {
+      width: 100%;
+      height: 90%;
+    }
+  }
+  label {
+    font-size: large;
   }
 }
