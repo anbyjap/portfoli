@@ -10,7 +10,7 @@ import Projects from "../Projects/Projects";
 import Contacts from "../Contacts/Contacts";
 
 const Home = () => {
-  const [tabIndex, setTabIndex] = useState(2);
+  const [tabIndex, setTabIndex] = useState(0);
   const handleChange = (_: SyntheticEvent<Element, Event>, value: string) => {
     setTabIndex(Number(value));
   };
