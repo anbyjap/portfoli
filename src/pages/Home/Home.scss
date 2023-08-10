@@ -1,10 +1,12 @@
+@import "../../colors";
+
 .home_wrapper {
   display: flex;
   width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
-  background-color: gray;
+  background-color: $main-color;
 }
 
 .card_wrapper {

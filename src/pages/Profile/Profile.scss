@@ -1,26 +1,100 @@
 @import "../../colors";
+@import "../../_breakpoint";
+@import "../../_mixin";
+
 
 .profile_wrapper {
   color: $font-color;
-  padding: 5% 5%;
+  // padding: 5% 5%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-  .personal_wrapper {
+  @include mq(sm) {
     display: flex;
-    flex-direction: column;
-    .profile_list {
-      font-weight: 700;
-      font-size: large;
-      color: $font-color;
+    align-items: center;
+  flex-direction: row;
+  }
+
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+  flex-direction: row;
+
+  }
+
+  .photo_wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(sm) {
+      display: flex;
+      align-items: center;
+    }
+
+    @include mq(md) {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+
+      height: 220px;
+
+      @include mq(sm) {
+        height: 100px;
+      }
+
+      @include mq(md) {
+        // transform: scale(0.5);
+        height: 300px;
+      }
     }
   }
 
-  .profile_title {
-    font-weight: bold;
-    color: $font-color;
+  .introduction_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      color: $accent-color;
+    }
+
+    .icon_list {
+      display: flex;
+      width: fit-content;
+    }
   }
-  .profile_content {
-    font-size: x-large;
-    font-weight: 800;
-    padding-left: 5%;
+
+  .contact_button:hover {
+    .icon {
+      color: $light-color;
+    }
+  }
+
+  .contact_button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    padding: 0;
+
+    .icon {
+      color: $icon-color;
+      font-size: 40px;
+    }
   }
 }
