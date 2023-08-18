@@ -1,24 +1,46 @@
 @import "../../colors";
+@import "../../_breakpoint";
+@import "../../_mixin";
+
 
 .home_wrapper {
-  display: flex;
   width: 100%;
   height: 100%;
-  justify-content: center;
-  align-items: center;
   background-color: $main-color;
+
+  @include mq(sm) {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-color;
+
+    .tab_wrapper {
+      width: 10%;
+
+      button {
+        width: 100%;
+        height: 100px;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
 }
 
 .card_wrapper {
   width: 100%;
-  height: 90%;
-  display: flex;
-  justify-content: right;
-  align-items: center;
+  height: 100%;
+  // justify-content: right;
 }
 
-@media (max-width: 960px) {
-  .css-y0fr9s-MuiButtonBase-root-MuiTab-root {
-    min-width: 8% !important;
-  }
-}
+// @media (max-width: 960px) {
+//   .css-y0fr9s-MuiButtonBase-root-MuiTab-root {
+//     min-width: 8% !important;
+//   }
+// }

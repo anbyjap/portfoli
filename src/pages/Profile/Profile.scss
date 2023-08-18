@@ -14,14 +14,13 @@
   @include mq(sm) {
     display: flex;
     align-items: center;
-  flex-direction: row;
+    flex-direction: row;
   }
 
   @include mq(md) {
     display: flex;
     align-items: center;
-  flex-direction: row;
-
+    flex-direction: row;
   }
 
   .photo_wrapper {

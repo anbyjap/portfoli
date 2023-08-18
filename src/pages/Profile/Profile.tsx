@@ -6,7 +6,7 @@ const Profile = () => {
   return (
     <div className="profile_wrapper">
       <div className="photo_wrapper">
-        <img alt="self_photo" src="/images/faceimage.jpg" />
+        <img alt="self_photo" src="/images/faceimage.png" />
       </div>
       <div className="introduction_wrapper">
         <div>
@@ -18,7 +18,7 @@ const Profile = () => {
           <div className="icon_list">
             <button className="contact_button">
               <Link
-                href="https://github.com/anbyjap"
+                href="mailto:haruru898@gmail.com"
                 className="contact_content"
                 color="inherit"
               >
