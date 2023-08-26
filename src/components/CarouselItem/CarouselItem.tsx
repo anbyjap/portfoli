@@ -2,29 +2,33 @@ import { CarouselItemProps } from "../../types";
 import { SkillsIcon } from "../SkillsIcon";
 import "./CarouselItem.scss";
 
-const CarouselItem = (props: CarouselItemProps) => {
+interface NewCarouselItemProps extends CarouselItemProps {
+  handleImageLoad: () => void;
+  isLoaded: boolean;
+}
+
+const CarouselItem = (props: NewCarouselItemProps) => {
   return (
     <div className="project_wrapper">
       <div className="imageBox">
-        <img src={props.imgSrc} alt="aaa" />
+        <img
+          src={props.imgSrc}
+          onLoad={() => props.handleImageLoad()}
+          alt="aaa"
+        />
       </div>
-      <h1 className="project_title">{props.name}</h1>
+      <p className="project_title">{props.name}</p>
 
       <div className="skills_wrapper">
-        <h2 className="project_title">Skils</h2>
-        <ul className="skills_list project_content">
+        <div className="skills_list">
           {props.skills.map((skillName) => (
-            <li>
-              <SkillsIcon name={skillName} />
-            </li>
+            <SkillsIcon name={skillName} />
           ))}
-        </ul>
+        </div>
       </div>
       <div>
-        <div>
-          <h2 className="project_title">Overview</h2>
-          <p className="project_content">{props.description}</p>
-        </div>
+        <h2 className="project_title">Overview</h2>
+        <p>{props.description}</p>
       </div>
     </div>
   );

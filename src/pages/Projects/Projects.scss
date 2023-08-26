@@ -16,7 +16,6 @@
     color: $accent-color;
     font-weight: 800;
     font-size: large;
-    margin: auto 0;
   }
 
   @include mq(sm) {
@@ -29,8 +28,8 @@
   }
   .project_content {
     font-size: large;
-    font-weight: 700;
+    font-weight: 500;
     padding-left: 5%;
-    line-height: 100%;
+    line-height: 120%;
   }
 }
