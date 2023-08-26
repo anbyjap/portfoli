@@ -1,27 +1,36 @@
 @import "../../colors";
+@import "../../_breakpoint";
+@import "../../_mixin";
 
 .project_wrapper {
   color: $font-color;
-
-  .project_wrapper {
-    display: flex;
-    flex-direction: column;
-    .project_list {
-      font-weight: 700;
-      font-size: large;
-      color: $font-color;
-    }
+  display: flex;
+  flex-direction: column;
+  .project_list {
+    font-weight: 700;
+    font-size: large;
+    color: $font-color;
   }
 
   .project_title {
-    color: $font-color;
+    color: $accent-color;
     font-weight: 800;
+    font-size: large;
     margin: auto 0;
+  }
+
+  @include mq(sm) {
+    .project_title {
+      color: $accent-color;
+      font-weight: 800;
+      font-size: xx-large;
+      margin: auto 0;
+    }
   }
   .project_content {
     font-size: large;
     font-weight: 700;
     padding-left: 5%;
-    line-height: 170%;
+    line-height: 100%;
   }
 }
