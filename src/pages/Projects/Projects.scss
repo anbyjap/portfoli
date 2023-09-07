@@ -4,8 +4,42 @@
 
 .project_wrapper {
   color: $font-color;
-  display: flex;
-  flex-direction: column;
+  margin: 3% 0;
+
+  .card {
+    margin: 2% 0;
+  }
+
+  
+  @include mq(sm) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); /* 2列の定義。各アイテムは最小で200pxの幅を持つ */
+    grid-template-rows: repeat(2, auto); /* 4行の定義。各行は内容に合わせて自動的に高さが設定される */
+    gap: 16px; /* グリッドのアイテム間の間隔を指定 */
+
+    .media {
+      height: 70%;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .expanded {
+      // position: fixed;
+      width: 80vw;
+      height: 90vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+      // background-color: rgba(0, 0, 0, 0.7);  // 背景を半透明に
+    }
+  }
+
+
+
   .project_list {
     font-weight: 700;
     font-size: large;

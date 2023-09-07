@@ -21,6 +21,8 @@ const Home = () => {
 
   const CustomTab = styled(Tab)(({ theme }) => ({
     color: colors.second,
+    width: "80%",
+    height: "80%",
     "&.Mui-selected": {
       color: colors.font,
     },

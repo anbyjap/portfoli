@@ -2,4 +2,6 @@
 
 .about_wrapper {
   a { color: $accent-color; }
+  display: flex;
+  align-items: center;
 }

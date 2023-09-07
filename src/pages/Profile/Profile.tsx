@@ -11,10 +11,10 @@ const Profile = () => {
       <div className="introduction_wrapper">
         <div>
           <h1>
-            Hello! I'm <span>Web Developer</span>
+            Hello! I'm <span>Full Stack Web Developer</span>
           </h1>
           <br />
-          <h3>with 3+ years experience</h3>
+          <h3>with 2+ years experience</h3>
           <div className="icon_list">
             <button className="contact_button">
               <Link
