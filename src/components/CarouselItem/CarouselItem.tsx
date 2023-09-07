@@ -44,16 +44,18 @@ const CarouselItem = (props: NewCarouselItemProps) => {
         <Typography gutterBottom variant="h5" component="div">
           {props.name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {props.skills.map((skillName) => (
-            <SkillsIcon name={skillName} />
-          ))}
-        </Typography>
 
         {props.expanded && (
-          <Typography gutterBottom component="div">
-            {props.description}
-          </Typography>
+          <div>
+            <Typography variant="body2" color="text.secondary">
+              {props.skills.map((skillName) => (
+                <SkillsIcon name={skillName} />
+              ))}
+            </Typography>
+            <Typography gutterBottom component="div">
+              {props.description}
+            </Typography>
+          </div>
         )}
 
         <Accordion className="hidden">
@@ -61,7 +63,11 @@ const CarouselItem = (props: NewCarouselItemProps) => {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
-          ></AccordionSummary>
+          >
+            {props.skills.map((skillName) => (
+              <SkillsIcon name={skillName} />
+            ))}
+          </AccordionSummary>
           <AccordionDetails>
             <Typography>{props.description}</Typography>
           </AccordionDetails>

@@ -6,7 +6,7 @@
   color: $font-color;
   background-color: transparent;
   width: 100%;
-  // height: 100%;
+  height: 100%;
 
   .imageBox {
     position: relative;
@@ -24,7 +24,7 @@
   }
 
   @include mq(sm) {
-      .imageBox {
+    .imageBox {
       padding-top: 30%; // デスクトップでの高さを調整
     }
 

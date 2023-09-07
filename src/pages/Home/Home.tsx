@@ -37,7 +37,7 @@ const Home = () => {
         variant="fullWidth"
         orientation={matches ? "vertical" : "horizontal"}
         centered
-        style={matches ? { top: "auto", bottom: 0 } : {}}
+        // style={matches ? { bottom: 0 } : {}}
         TabIndicatorProps={{
           style: {
             backgroundColor: colors.font,
