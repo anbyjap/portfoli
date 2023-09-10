@@ -73,21 +73,24 @@ const Projects = () => {
   };
 
   return (
-    <div className="project_wrapper">
-      {items.map((item, i) => (
-        <CarouselItem
-          key={i}
-          name={item.name}
-          description={item.description}
-          skills={item.skills}
-          imgSrc={item.imgSrc}
-          link={item.link}
-          expanded={i === expandedItemIndex}
-          expandedItemIndex={expandedItemIndex}
-          hidden={expandedItemIndex !== null && i !== expandedItemIndex}
-          onExpand={() => toggleExpand(i)}
-        />
-      ))}
+    <div>
+      <h1>Projects</h1>
+      <div className="project_wrapper">
+        {items.map((item, i) => (
+          <CarouselItem
+            key={i}
+            name={item.name}
+            description={item.description}
+            skills={item.skills}
+            imgSrc={item.imgSrc}
+            link={item.link}
+            expanded={i === expandedItemIndex}
+            expandedItemIndex={expandedItemIndex}
+            hidden={expandedItemIndex !== null && i !== expandedItemIndex}
+            onExpand={() => toggleExpand(i)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

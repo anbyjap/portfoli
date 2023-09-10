@@ -33,7 +33,7 @@ const CarouselItem = (props: NewCarouselItemProps) => {
       className={className}
     >
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 140, padding: "1em 1em 0 1em", objectFit: "contain" }}
         image={props.imgSrc}
         className="media"
         title="green iguana"
@@ -57,7 +57,15 @@ const CarouselItem = (props: NewCarouselItemProps) => {
           </div>
         )}
 
-        <Accordion className="hidden">
+        <Accordion
+          className="hidden"
+          style={{
+            boxShadow: "none", // removes shadow
+            border: "none", // removes borders
+            outline: "none", // removes outlines if any
+            backgroundColor: "transparent",
+          }}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"

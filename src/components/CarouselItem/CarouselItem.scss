@@ -23,6 +23,11 @@
     }
   }
 
+  .hidden.MuiAccordion-root::before {
+    background-color: transparent !important;
+    content: none !important;
+  }
+
   @include mq(sm) {
     .imageBox {
       padding-top: 30%; // デスクトップでの高さを調整
