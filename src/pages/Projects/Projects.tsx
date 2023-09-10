@@ -15,36 +15,11 @@ const items: CarouselItemProps[] = [
     link: "https://web-coias.u-aizu.ac.jp/",
   },
   {
-    name: "Managing junior high school students",
-    description:
-      "This is a student management application for teachers of junior high school students, using web and Android devices. web is made in React and typescript for teachers, and students can write test results, class comments, diaries, etc. on their Android devices. The system streamlines the work in the field of education, which used to be done manually.",
-    skills: ["React", "Python", "Aws"],
+    name: "Spo-gocchi",
+    description: "",
+    skills: ["React", "TypeScript", "Go", "Docker"],
     imgSrc: classroomImage,
-    link: "",
-  },
-  {
-    name: "Managing junior high school students",
-    description:
-      "This is a student management application for teachers of junior high school students, using web and Android devices. web is made in React and typescript for teachers, and students can write test results, class comments, diaries, etc. on their Android devices. The system streamlines the work in the field of education, which used to be done manually.",
-    skills: ["React", "Python", "Aws"],
-    imgSrc: classroomImage,
-    link: "",
-  },
-  {
-    name: "Managing junior high school students",
-    description:
-      "This is a student management application for teachers of junior high school students, using web and Android devices. web is made in React and typescript for teachers, and students can write test results, class comments, diaries, etc. on their Android devices. The system streamlines the work in the field of education, which used to be done manually.",
-    skills: ["React", "Python", "Aws"],
-    imgSrc: classroomImage,
-    link: "",
-  },
-  {
-    name: "Managing junior high school students",
-    description:
-      "This is a student management application for teachers of junior high school students, using web and Android devices. web is made in React and typescript for teachers, and students can write test results, class comments, diaries, etc. on their Android devices. The system streamlines the work in the field of education, which used to be done manually.",
-    skills: ["React", "Python", "Aws"],
-    imgSrc: classroomImage,
-    link: "",
+    link: "https://github.com/aizuHackathon",
   },
   {
     name: "Managing junior high school students",
