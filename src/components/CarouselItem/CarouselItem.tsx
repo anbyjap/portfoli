@@ -2,9 +2,7 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Button,
   Card,
-  CardActions,
   CardContent,
   CardMedia,
   Typography,
@@ -40,6 +38,7 @@ const CarouselItem = (props: NewCarouselItemProps) => {
         className="media"
         title="green iguana"
       />
+      {/* <ImageComponent alt="aaa" imageName={props.imgSrc} /> */}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {props.name}
