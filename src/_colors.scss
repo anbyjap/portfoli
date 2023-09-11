@@ -1,16 +1,15 @@
-$main-color: #445069;
-$second-color: #252B48;
-$accent-color: #F7E987;
-$light-color: #5B9A8B;
+$main-color: #252b48;
+$second-color: #445069;
+$accent-color: #f7e987;
+$light-color: #5b9a8b;
 $icon-color: #fff;
 $font-color: #f1f6f5;
 
-
 :export {
-    main: $main-color;
-    second: $second-color;
-    accent: $accent-color;
-    light: $light-color;
-    icon: $icon-color;
-    font: $font-color;
+  main: $main-color;
+  second: $second-color;
+  accent: $accent-color;
+  light: $light-color;
+  icon: $icon-color;
+  font: $font-color;
 }

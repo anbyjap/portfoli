@@ -1,4 +1,6 @@
 @import "../../colors";
+@import "../../_breakpoint";
+@import "../../_mixin";
 
 .tabPanel {
   width: 100%;
@@ -10,7 +12,10 @@
   color: $font-color;
 
   .tabpanel_wrapper {
-    height: 100%;
+    height: 90vh;
+    @include mq(sm) {
+      height: 100%;
+    }
 
     .child_wrapper {
       margin: 0 5%;

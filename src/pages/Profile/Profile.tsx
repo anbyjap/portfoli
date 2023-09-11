@@ -1,12 +1,13 @@
 import { Email, LinkedIn, GitHub } from "@material-ui/icons";
 import { Link } from "@mui/material";
 import "./Profile.scss";
+import ImageComponent from "../../components/ImageComponent";
 
 const Profile = () => {
   return (
     <div className="profile_wrapper">
       <div className="photo_wrapper">
-        <img alt="self_photo" src="/images/faceimage.png" />
+        <ImageComponent alt="self_photo" imageName="faceimage.png" />
       </div>
       <div className="introduction_wrapper">
         <div>

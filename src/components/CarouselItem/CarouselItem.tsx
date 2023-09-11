@@ -2,9 +2,7 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Button,
   Card,
-  CardActions,
   CardContent,
   CardMedia,
   Typography,
@@ -35,33 +33,48 @@ const CarouselItem = (props: NewCarouselItemProps) => {
       className={className}
     >
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 140, padding: "1em 1em 0 1em", objectFit: "contain" }}
         image={props.imgSrc}
         className="media"
         title="green iguana"
       />
+      {/* <ImageComponent alt="aaa" imageName={props.imgSrc} /> */}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {props.name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {props.skills.map((skillName) => (
-            <SkillsIcon name={skillName} />
-          ))}
-        </Typography>
 
         {props.expanded && (
-          <Typography gutterBottom component="div">
-            {props.description}
-          </Typography>
+          <div>
+            <Typography variant="body2" color="text.secondary">
+              {props.skills.map((skillName) => (
+                <SkillsIcon name={skillName} />
+              ))}
+            </Typography>
+            <Typography gutterBottom component="div">
+              {props.description}
+            </Typography>
+          </div>
         )}
 
-        <Accordion className="hidden">
+        <Accordion
+          className="hidden"
+          style={{
+            boxShadow: "none", // removes shadow
+            border: "none", // removes borders
+            outline: "none", // removes outlines if any
+            backgroundColor: "transparent",
+          }}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
-          ></AccordionSummary>
+          >
+            {props.skills.map((skillName) => (
+              <SkillsIcon name={skillName} />
+            ))}
+          </AccordionSummary>
           <AccordionDetails>
             <Typography>{props.description}</Typography>
           </AccordionDetails>
