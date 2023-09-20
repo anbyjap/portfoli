@@ -4,6 +4,7 @@
 
 .project_wrapper {
   color: $font-color;
+  height: 90%;
   margin: 3% 0;
 
   .card {
@@ -25,7 +26,7 @@
     // 480px以上 (タブレットサイズ) で2列
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     .media {
-      height: 70%;
+      height: 60%;
     }
 
     .hidden {
@@ -41,7 +42,6 @@
       right: 0;
       bottom: 0;
       z-index: 1000;
-      // background-color: rgba(0, 0, 0, 0.7);  // 背景を半透明に
     }
   }
 
@@ -52,33 +52,34 @@
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 
     // hoverした時のエフェクト
-    &:hover {
-      transform: translateY(-10px); // カードを少し上に動かす
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // 影をつけることで浮き上がって見えるようにする
-    }
+    // &:hover {
+    //   transform: translateY(-10px); // カードを少し上に動かす
+    //   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // 影をつけることで浮き上がって見えるようにする
+    // }
 
     // 1000px以上 (PCサイズ) で3列
     grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, minmax(200px, 1fr));
 
     .media {
-      height: 70%;
+      height: 50%;
     }
 
     .hidden {
       display: none;
     }
 
-    .expanded {
-      // position: fixed;
-      width: 80vw;
-      height: 90vh;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1000;
-      // background-color: rgba(0, 0, 0, 0.7);  // 背景を半透明に
-    }
+    // .expanded {
+    //   // position: fixed;
+    //   width: 80vw;
+    //   height: 90vh;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   z-index: 1000;
+    //   // background-color: rgba(0, 0, 0, 0.7);  // 背景を半透明に
+    // }
   }
 
   .project_list {

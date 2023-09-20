@@ -8,6 +8,11 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import Backdrop from "@mui/material/Backdrop";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import Button from "@mui/material/Button";
 import { CarouselItemProps } from "../../types";
 import { SkillsIcon } from "../SkillsIcon";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -28,36 +33,26 @@ const CarouselItem = (props: NewCarouselItemProps) => {
     : "card";
 
   return (
-    <Card
-      sx={{ display: "block" }}
-      onClick={props.onExpand}
-      className={className}
-    >
+    <Card sx={{ display: "block" }} onClick={props.onExpand}>
       <CardMedia
         sx={{ height: 140, padding: "1em 1em 0 1em", objectFit: "contain" }}
         image={props.imgSrc}
         className="media"
-        title="green iguana"
+        title={props.name}
       />
-      {/* <ImageComponent alt="aaa" imageName={props.imgSrc} /> */}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {props.name}
         </Typography>
-
-        {props.expanded && (
+        {window.innerWidth > 768 && (
           <div>
             <Typography variant="body2" color="text.secondary">
               {props.skills.map((skillName) => (
                 <SkillsIcon name={skillName} />
               ))}
             </Typography>
-            <Typography gutterBottom component="div">
-              {props.description}
-            </Typography>
           </div>
         )}
-
         <Accordion
           className="hidden"
           style={{

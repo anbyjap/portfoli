@@ -6,6 +6,9 @@ import coiasImage from "../../images/coias.jpg";
 import classroomImage from "../../images/classroom.jpg";
 import spogocchiImage from "../../images/spogocchi.png";
 import "./Projects.scss";
+import { Box, Modal } from "@material-ui/core";
+import { Typography } from "@mui/material";
+import { SkillsIcon } from "../../components/SkillsIcon";
 
 const items: CarouselItemProps[] = [
   {
@@ -40,7 +43,7 @@ const Projects = () => {
     null
   );
 
-  const toggleExpand = (index: number) => {
+  const toggleExpand = (index: number | null) => {
     if (window.innerWidth <= 768) {
       return;
     }
@@ -70,6 +73,54 @@ const Projects = () => {
           />
         ))}
       </div>
+      {expandedItemIndex !== null && (
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          open={expandedItemIndex !== null}
+          onClose={() => toggleExpand(null)}
+          closeAfterTransition
+        >
+          <Box
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              backgroundColor: "white",
+              padding: "3%",
+              maxWidth: "80%", // Set the maximum width of the modal content
+              width: "50%", // Set the exact width of the modal content
+            }}
+          >
+            <img
+              style={{
+                width: "100%", // Ensure the image takes up the full width of its container
+                height: "auto", // Automatically adjust the height to maintain aspect ratio
+                // padding: "1em 1em 0 1em",
+                objectFit: "contain",
+              }}
+              src={items[expandedItemIndex].imgSrc}
+              alt={items[expandedItemIndex].name}
+            />
+            <Box style={{ backgroundColor: "white" }}>
+              <Typography gutterBottom variant="h5" component="div">
+                {items[expandedItemIndex].name}
+              </Typography>
+              <Box>
+                <Typography variant="body2" color="text.secondary">
+                  {items[expandedItemIndex].skills.map((skillName) => (
+                    <SkillsIcon key={skillName} name={skillName} />
+                  ))}
+                </Typography>
+                <Typography gutterBottom component="div">
+                  {items[expandedItemIndex].description}
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Modal>
+      )}
     </div>
   );
 };
