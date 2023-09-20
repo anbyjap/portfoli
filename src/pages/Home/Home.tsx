@@ -14,7 +14,7 @@ import { styled } from "@mui/material/styles";
 import colors from "../../_colors.scss";
 
 const Home = () => {
-  const matches = useMediaQuery("(min-width:480px)");
+  const matches = useMediaQuery("(min-width:768px)");
   const [tabIndex, setTabIndex] = useState(0);
   const handleChange = (_: SyntheticEvent<Element, Event>, value: string) => {
     setTabIndex(Number(value));

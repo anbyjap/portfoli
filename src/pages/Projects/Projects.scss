@@ -11,7 +11,7 @@
     margin: 2% 0;
   }
 
-  @include mq(sm) {
+  @include mq(md) {
     display: grid;
     gap: 10px;
 

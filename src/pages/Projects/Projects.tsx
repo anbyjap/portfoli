@@ -1,5 +1,5 @@
 import CarouselItem from "../../components/CarouselItem/CarouselItem";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
 import { CarouselItemProps } from "../../types";
 import coiasImage from "../../images/coias.jpg";
@@ -42,9 +42,25 @@ const Projects = () => {
   const [expandedItemIndex, setExpandedItemIndex] = useState<null | number>(
     null
   );
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Function to update the window width in the state
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Add event listener to track window resize
+    window.addEventListener("resize", handleWindowResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []); //
 
   const toggleExpand = (index: number | null) => {
-    if (window.innerWidth <= 768) {
+    if (windowWidth <= 768) {
       return;
     }
     if (expandedItemIndex === index) {
@@ -70,6 +86,7 @@ const Projects = () => {
             expandedItemIndex={expandedItemIndex}
             hidden={expandedItemIndex !== null && i !== expandedItemIndex}
             onExpand={() => toggleExpand(i)}
+            windowWidth={windowWidth}
           />
         ))}
       </div>

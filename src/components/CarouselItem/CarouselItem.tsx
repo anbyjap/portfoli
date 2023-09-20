@@ -23,17 +23,12 @@ interface NewCarouselItemProps extends CarouselItemProps {
   expanded: boolean;
   hidden: boolean;
   expandedItemIndex: null | number;
+  windowWidth: number;
 }
 
 const CarouselItem = (props: NewCarouselItemProps) => {
-  const className = props.expanded
-    ? "card expanded"
-    : props.hidden
-    ? "card hidden"
-    : "card";
-
   return (
-    <Card sx={{ display: "block" }} onClick={props.onExpand}>
+    <Card className="card" sx={{ display: "block" }} onClick={props.onExpand}>
       <CardMedia
         sx={{ height: 140, padding: "1em 1em 0 1em", objectFit: "contain" }}
         image={props.imgSrc}
@@ -44,7 +39,7 @@ const CarouselItem = (props: NewCarouselItemProps) => {
         <Typography gutterBottom variant="h5" component="div">
           {props.name}
         </Typography>
-        {window.innerWidth > 768 && (
+        {props.windowWidth > 768 && (
           <div>
             <Typography variant="body2" color="text.secondary">
               {props.skills.map((skillName) => (
