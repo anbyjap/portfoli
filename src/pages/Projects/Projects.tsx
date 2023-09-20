@@ -1,5 +1,6 @@
 import CarouselItem from "../../components/CarouselItem/CarouselItem";
 import { useState } from "react";
+import React from "react";
 import { CarouselItemProps } from "../../types";
 import coiasImage from "../../images/coias.jpg";
 import classroomImage from "../../images/classroom.jpg";

@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Accordion,
   AccordionDetails,
@@ -20,6 +21,7 @@ interface NewCarouselItemProps extends CarouselItemProps {
 }
 
 const CarouselItem = (props: NewCarouselItemProps) => {
+  console.log(props);
   const className = props.expanded
     ? "card expanded"
     : props.hidden
