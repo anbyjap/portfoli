@@ -21,7 +21,6 @@ interface NewCarouselItemProps extends CarouselItemProps {
 }
 
 const CarouselItem = (props: NewCarouselItemProps) => {
-  console.log(props);
   const className = props.expanded
     ? "card expanded"
     : props.hidden
@@ -70,6 +69,7 @@ const CarouselItem = (props: NewCarouselItemProps) => {
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
+            sx={{ padding: 0 }}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
