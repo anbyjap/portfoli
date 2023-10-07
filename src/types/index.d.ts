@@ -8,6 +8,7 @@ interface CarouselItemProps {
   description: string;
   imgSrc: string;
   link: string;
+  projectScreenshots: Array<string>;
 }
 
 export type { Name };
