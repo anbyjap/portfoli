@@ -81,6 +81,11 @@ const CarouselItem = (props: NewCarouselItemProps) => {
           <AccordionDetails>
             <NewlineText text={props.description} />
           </AccordionDetails>
+          {props.link !== "" && (
+            <div style={{ display: "flex", justifyContent: "end" }}>
+              <a href={props.link}>⇒Go and see it</a>
+            </div>
+          )}
         </Accordion>
       </CardContent>
     </Card>
