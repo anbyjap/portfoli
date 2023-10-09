@@ -129,7 +129,7 @@ const Projects = () => {
             }}
           >
             <Carousel showThumbs={false} useKeyboardArrows={true}>
-              {items[expandedItemIndex].projectScreenshots.map(
+              {items[expandedItemIndex]?.projectScreenshots?.map(
                 (item, index) => (
                   <div key={index}>
                     <img

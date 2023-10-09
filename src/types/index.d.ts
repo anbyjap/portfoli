@@ -7,8 +7,8 @@ interface CarouselItemProps {
   skills: Array<Name>;
   description: string;
   imgSrc: string;
+  projectScreenshots?: string[];
   link: string;
-  projectScreenshots: Array<string>;
 }
 
 export type { Name };
