@@ -8,6 +8,14 @@
   width: 100%;
   height: 100%;
 
+  .card {
+    transition: transform 0.3s ease;
+  }
+
+  .card.hovered {
+    transform: scale(1.05);
+  }
+
   .imageBox {
     position: relative;
     width: 100%;

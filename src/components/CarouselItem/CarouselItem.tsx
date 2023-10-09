@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Accordion,
   AccordionDetails,
@@ -27,8 +27,23 @@ interface NewCarouselItemProps extends CarouselItemProps {
 }
 
 const CarouselItem = (props: NewCarouselItemProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
   return (
-    <Card className="card" sx={{ display: "block" }} onClick={props.onExpand}>
+    <Card
+      className={`card ${isHovered ? "hovered" : ""}`}
+      sx={{ display: "block" }}
+      onClick={props.onExpand}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <CardMedia
         sx={{ height: 140, padding: "1em 1em 0 1em", objectFit: "contain" }}
         image={props.imgSrc}

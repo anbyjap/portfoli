@@ -147,19 +147,20 @@ const Projects = () => {
               )}
             </Carousel>
             <Box style={{ backgroundColor: "white" }}>
-              <Typography gutterBottom variant="h5" component="div">
-                {items[expandedItemIndex].name}
-              </Typography>
+              <h2>{items[expandedItemIndex].name}</h2>
               <Box>
-                <Typography variant="body2" color="text.secondary">
+                <h2>
                   {items[expandedItemIndex].skills.map((skillName) => (
                     <SkillsIcon key={skillName} name={skillName} />
                   ))}
-                </Typography>
-                <Typography gutterBottom component="div">
-                  {items[expandedItemIndex].description}
-                </Typography>
+                </h2>
+                <p>{items[expandedItemIndex].description}</p>
               </Box>
+              {items[expandedItemIndex].link !== "" && (
+                <Box style={{ display: "flex", justifyContent: "end" }}>
+                  <a href={items[expandedItemIndex].link}>⇒Go and see it</a>
+                </Box>
+              )}
             </Box>
           </Box>
         </Modal>
