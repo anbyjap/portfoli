@@ -11,7 +11,7 @@ import Projects from "../Projects/Projects";
 import About from "../About/About";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { styled } from "@mui/material/styles";
-import colors from "../../_colors.scss?inline";
+import colors from "../../_colors.scss";
 
 const Home = () => {
   const matches = useMediaQuery("(min-width:768px)");
