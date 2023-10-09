@@ -17,12 +17,6 @@
 
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 
-    // hoverした時のエフェクト
-    // &:hover {
-    //   transform: translateY(-10px); // カードを少し上に動かす
-    //   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // 影をつけることで浮き上がって見えるようにする
-    // }
-
     // 480px以上 (タブレットサイズ) で2列
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     .media {
@@ -36,7 +30,7 @@
     .expanded {
       // position: fixed;
       width: 80vw;
-      height: 90vh;
+      height: 90svh;
       top: 0;
       left: 0;
       right: 0;

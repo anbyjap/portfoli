@@ -12,7 +12,7 @@
   color: $font-color;
 
   .tabpanel_wrapper {
-    height: 90vh;
+    height: 90svh;
     @include mq(sm) {
       height: 100%;
     }
