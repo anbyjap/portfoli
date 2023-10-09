@@ -8,11 +8,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import Backdrop from "@mui/material/Backdrop";
-import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
-import Fade from "@mui/material/Fade";
-import Button from "@mui/material/Button";
+import { NewlineText } from "../../components/NewLineText";
 import { CarouselItemProps } from "../../types";
 import { SkillsIcon } from "../SkillsIcon";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -83,7 +79,7 @@ const CarouselItem = (props: NewCarouselItemProps) => {
             ))}
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>{props.description}</Typography>
+            <NewlineText text={props.description} />
           </AccordionDetails>
         </Accordion>
       </CardContent>

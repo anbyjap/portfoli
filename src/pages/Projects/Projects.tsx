@@ -14,15 +14,16 @@ import spogocchiImage3 from "../../images/spogocchi_3.png";
 import spogocchiImage4 from "../../images/spogocchi_4.png";
 import "./Projects.scss";
 import { Box, Modal } from "@material-ui/core";
-import { Typography } from "@mui/material";
 import { SkillsIcon } from "../../components/SkillsIcon";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { NewlineText } from "../../components/NewLineText";
 
 const items: CarouselItemProps[] = [
   {
     name: "COIAS(Come On! Impacting ASteroids)",
-    description:
-      "COIAS is a web application that democratizes the discovery of potentially hazardous, undiscovered asteroids, making it accessible to both experts and non-experts, including students. It leverages technologies like React, Python, and Docker.      As a full-stack engineer, I played a vital role in this project. COIAS is already live and widely used. One notable achievement was significantly improving the user experience. I reduced the asteroid discovery process from 10 minutes in the desktop version to just 2-3 minutes.   COIAS is a crucial tool for asteroid threat awareness, and my UX enhancements have made it more user-friendly and efficient.",
+    description: `COIAS is a web application that democratizes the discovery of potentially hazardous, undiscovered asteroids, making it accessible to both experts and non-experts, including students. It leverages technologies like React, Python, and Docker.
+      
+      As a full-stack engineer, I played a vital role in this project. COIAS is already live and widely used. One notable achievement was significantly improving the user experience. I reduced the asteroid discovery process from 10 minutes in the desktop version to just 2-3 minutes.   COIAS is a crucial tool for asteroid threat awareness, and my UX enhancements have made it more user-friendly and efficient.`,
     skills: ["React", "TypeScript", "Python", "Mysql", "Docker"],
     imgSrc: coiasImage,
     projectScreenshots: [coiasImage, coiasImage1, coiasImage2],
@@ -30,8 +31,9 @@ const items: CarouselItemProps[] = [
   },
   {
     name: "SupoGotchi",
-    description:
-      "SupoGotchi is a mobile app designed for enjoyable exercise management, primarily built using React Native and Go. During a hackathon, I collaborated with a team of about 10 university peers to develop this app. In SupoGotchi, users can track exercise records and watch their avatars evolve or devolve based on performance. Users can also manage weight and height. I participated as a frontend engineer using React Native and TypeScript. My role involved designing a user-friendly interface and creating a cross-platform app. This project allowed me to enhance my frontend development skills and contribute to team efforts.SupoGotchi promotes a healthy lifestyle and fun for users, showcasing my growth in frontend development and teamwork experience.",
+    description: `SupoGotchi is a mobile app designed for enjoyable exercise management, primarily built using React Native and Go. During a hackathon, I collaborated with a team of about 10 university peers to develop this app.
+      In SupoGotchi, users can track exercise records and watch their avatars evolve or devolve based on performance. Users can also manage weight and height.
+      I participated as a frontend engineer using React Native and TypeScript. My role involved designing a user-friendly interface and creating a cross-platform app. This project allowed me to enhance my frontend development skills and contribute to team efforts.SupoGotchi promotes a healthy lifestyle and fun for users, showcasing my growth in frontend development and teamwork experience.`,
     skills: ["React", "TypeScript", "Go", "Docker"],
     imgSrc: spogocchiImage,
     projectScreenshots: [
@@ -59,8 +61,6 @@ const Projects = () => {
     null
   );
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  const a = [coiasImage, coiasImage1, coiasImage2];
 
   useEffect(() => {
     // Function to update the window width in the state
@@ -154,7 +154,9 @@ const Projects = () => {
                     <SkillsIcon key={skillName} name={skillName} />
                   ))}
                 </h2>
-                <p>{items[expandedItemIndex].description}</p>
+                <p>
+                  <NewlineText text={items[expandedItemIndex].description} />
+                </p>
               </Box>
               {items[expandedItemIndex].link !== "" && (
                 <Box style={{ display: "flex", justifyContent: "end" }}>
