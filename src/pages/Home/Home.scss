@@ -4,7 +4,7 @@
 
 .home_wrapper {
   display: flex;
-  height: 100vh; // 画面の高さいっぱいにする
+  height: 100svh; // 画面の高さいっぱいにする
   flex-direction: column-reverse;
   background-color: $main-color;
 
@@ -15,8 +15,6 @@
     align-items: center;
 
     .tab_wrapper {
-      width: 10%;
-
       button {
         width: 100%;
         height: 100px;
