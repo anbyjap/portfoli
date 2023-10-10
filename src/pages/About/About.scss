@@ -1,7 +1,16 @@
 @import "../../colors";
 
 .about_wrapper {
-  a { color: $accent-color; }
+  a {
+    color: $accent-color;
+  }
   display: flex;
   align-items: center;
+  height: 90svh;
+  width: 100%;
+
+  div {
+    height: 100%;
+    width: 100%;
+  }
 }

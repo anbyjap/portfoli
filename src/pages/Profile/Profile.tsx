@@ -9,7 +9,7 @@ const Profile = () => {
       <div className="photo_wrapper">
         <img alt="aaa" src={selfPhoto} />
       </div>
-      <div className="introduction_wrapper">
+      <div className="introduction_wrapper fadeInUp">
         <div>
           <h1>
             Hello! I'm <span>Full Stack Web Developer</span>

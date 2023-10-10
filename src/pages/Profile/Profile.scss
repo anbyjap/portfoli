@@ -2,7 +2,6 @@
 @import "../../_breakpoint";
 @import "../../_mixin";
 
-
 .profile_wrapper {
   color: $font-color;
   // padding: 5% 5%;
@@ -10,6 +9,24 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
 
   @include mq(sm) {
     display: flex;
