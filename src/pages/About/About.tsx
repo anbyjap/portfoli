@@ -1,54 +1,53 @@
 import React, { useState, useCallback } from "react";
 
 import "./About.scss";
-import about1 from "../../images/about/about1.jpg";
-import about2 from "../../images/about/about2.jpg";
-import about3 from "../../images/about/about3.jpg";
-import about4 from "../../images/about/about4.jpg";
-import about5 from "../../images/about/about5.jpg";
-import about6 from "../../images/about/about6.jpg";
 
-import Gallery from "react-photo-gallery";
+import { slides, advancedSlides } from "../../data/slides";
 
-const photos = [
-  {
-    src: about1,
-    width: 4,
-    height: 3,
-  },
-  {
-    src: about2,
-    width: 4,
-    height: 3,
-  },
-  {
-    src: about3,
-    width: 4,
-    height: 3,
-  },
-  {
-    src: about4,
-    width: 4,
-    height: 3,
-  },
-  {
-    src: about5,
-    width: 554,
-    height: 739,
-  },
-  {
-    src: about6,
-    width: 6,
-    height: 13,
-  },
-];
+import PhotoAlbum from "react-photo-album";
+
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+// import optional lightbox plugins
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import Captions from "yet-another-react-lightbox/plugins/captions";
+import Video from "yet-another-react-lightbox/plugins/video";
+import "yet-another-react-lightbox/plugins/captions.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 const About = () => {
+  const [index, setIndex] = useState(-1);
+
   return (
     <div className="about_wrapper">
       <div>
         <h1>About Me</h1>
-        <Gallery photos={photos} direction="column" />
+        <PhotoAlbum
+          layout="masonry"
+          photos={slides}
+          targetRowHeight={150}
+          onClick={({ index: current }) => setIndex(current)}
+        />
+
+        <Lightbox
+          slides={advancedSlides.map((slide) => {
+            const a = `📍${slide.description}`;
+            const slideCopy = { ...slide };
+            slideCopy.description = a;
+            return slideCopy;
+          })}
+          open={index >= 0}
+          index={index}
+          close={() => setIndex(-1)}
+          // enable optional lightbox plugins
+          plugins={[Video, Captions, Fullscreen, Slideshow, Thumbnails, Zoom]}
+          // captions={{ showToggle, descriptionTextAlign, descriptionMaxLines }}
+        />
+        {/* <Gallery photos={slides} directsion={"column"} /> */}
         {/* <h2>Education</h2>
         <h3>
           Bachelar's degree of computer science in&nbsp;
