@@ -11,7 +11,7 @@ import Projects from "../Projects/Projects";
 import About from "../About/About";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { styled } from "@mui/material/styles";
-import colors from "../../_colors.scss";
+// import colors from "../../_colors.scss";
 
 const Home = () => {
   const matches = useMediaQuery("(min-width:768px)");
@@ -21,11 +21,12 @@ const Home = () => {
   };
 
   const CustomTab = styled(Tab)(({ theme }) => ({
-    color: colors.second,
+    // color: colors.second,
+    color: "#445069", // <- Change the color here
     width: "80%",
     height: "80%",
     "&.Mui-selected": {
-      color: colors.font,
+      color: "#f7e987",
     },
   }));
 
@@ -41,7 +42,7 @@ const Home = () => {
         // style={matches ? { bottom: 0 } : {}}
         TabIndicatorProps={{
           style: {
-            backgroundColor: colors.font,
+            backgroundColor: "#f7e987",
           },
         }}
       >
