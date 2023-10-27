@@ -83,7 +83,9 @@ const CarouselItem = (props: NewCarouselItemProps) => {
           </AccordionDetails>
           {props.link !== "" && (
             <div style={{ display: "flex", justifyContent: "end" }}>
-              <a href={props.link}>⇒Go and see it</a>
+              <a href={props.link} target="_blank">
+                ⇒Go and see it
+              </a>
             </div>
           )}
         </Accordion>

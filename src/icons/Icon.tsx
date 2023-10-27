@@ -5,6 +5,7 @@ import { ReactComponent as Python } from "../icons/python_icon.svg";
 import { ReactComponent as React } from "../icons/react_icon.svg";
 import { ReactComponent as TypeScript } from "../icons/typescript_icon.svg";
 import { ReactComponent as Go } from "../icons/go_icon.svg";
+import { ReactComponent as PostgreSQL } from "../icons/postgresql_icon.svg";
 
 const icons = {
   Aws,
@@ -14,6 +15,7 @@ const icons = {
   React,
   TypeScript,
   Go,
+  PostgreSQL,
 };
 
 export default icons;
