@@ -98,12 +98,29 @@
 
     .skill-button {
       // Other styles if needed...
+      position: relative;
 
       &:hover {
         // Your hover styles go here
         transform: scale(1.1); // Example for a scale effect
         // You can add box-shadow, background-color, border-color, etc.
       }
+    }
+
+    .skill-experience {
+      position: absolute;
+      bottom: -20px; /* Adjust as needed */
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.3s linear;
+    }
+
+    .skill-button:hover .skill-experience {
+      visibility: visible;
+      opacity: 1;
     }
 
     span {

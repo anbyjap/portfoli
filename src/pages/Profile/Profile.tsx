@@ -4,23 +4,32 @@ import selfPhoto from "../../images/faceimage.png";
 import "./Profile.scss";
 import { SkillsIcon } from "../../components/SkillsIcon";
 import { useState } from "react";
+import { Name } from "../../types";
 
-const images = [
-  <SkillsIcon name="React" size={50} />,
-  <SkillsIcon name="TypeScript" size={50} />,
-  <SkillsIcon name="Python" size={50} />,
-  <SkillsIcon name="Docker" size={50} />,
+interface skill {
+  name: Name;
+  size: number;
+  experience: string;
+}
+
+const skills: skill[] = [
+  { name: "React", size: 50, experience: "2 years" },
+  { name: "TypeScript", size: 50, experience: "1.5 years" },
+  { name: "Python", size: 50, experience: "4 years" },
+  { name: "Docker", size: 50, experience: "2 year" },
+  { name: "Mysql", size: 50, experience: "2 years" },
+  { name: "PostgreSQL", size: 50, experience: "1 years" },
 ];
 
 const Profile = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [hoveredSkillName, setHoveredSkillName] = useState<string>();
 
-  const hoverStyle = isHovered
-    ? {
-        transform: "scale(1.1)", // Example hover style
-        transition: "transform 0.3s",
-      }
-    : {};
+  // const hoverStyle = hoveredSkillName
+  //   ? {
+  //       transform: "scale(1.1)", // Example hover style
+  //       transition: "transform 0.3s",
+  //     }
+  //   : {};
   return (
     <div className="profile_wrapper">
       <div className="photo_wrapper">
@@ -58,7 +67,7 @@ const Profile = () => {
                   // e.g. animation: 'slide 30s infinite linear'
                 }}
               >
-                {images.map((i, index) => {
+                {skills.map((skill, index) => {
                   return (
                     <button
                       key={index}
@@ -67,19 +76,25 @@ const Profile = () => {
                         backgroundColor: "transparent",
                         borderColor: "transparent",
                         display: "flex",
+                        flexDirection: "column",
                         justifyContent: "center",
-                        alignItems: "flex-start",
+                        alignItems: "center",
                         width: "30rem",
-                        // For the gap, you will need to apply margin inline or handle in CSS
                       }}
-                      onMouseEnter={() => setIsHovered(true)}
-                      onMouseLeave={() => setIsHovered(false)}
+                      onMouseEnter={() =>
+                        setHoveredSkillName(`${skill.name}-1`)
+                      }
+                      onMouseLeave={() => setHoveredSkillName("")}
                     >
-                      {i}
+                      <SkillsIcon name={skill.name} size={skill.size} />
+                      {hoveredSkillName === `${skill.name}-1` && (
+                        <span>{skill.experience}</span>
+                      )}
                     </button>
                   );
                 })}
-                {images.map((i, index) => {
+
+                {skills.map((skill, index) => {
                   return (
                     <button
                       key={index}
@@ -88,15 +103,20 @@ const Profile = () => {
                         backgroundColor: "transparent",
                         borderColor: "transparent",
                         display: "flex",
+                        flexDirection: "column",
                         justifyContent: "center",
-                        alignItems: "flex-start",
+                        alignItems: "center",
                         width: "30rem",
-                        // For the gap, you will need to apply margin inline or handle in CSS
                       }}
-                      onMouseEnter={() => setIsHovered(true)}
-                      onMouseLeave={() => setIsHovered(false)}
+                      onMouseEnter={() =>
+                        setHoveredSkillName(`${skill.name}-2`)
+                      }
+                      onMouseLeave={() => setHoveredSkillName("")}
                     >
-                      {i}
+                      <SkillsIcon name={skill.name} size={skill.size} />
+                      {hoveredSkillName === `${skill.name}-2` && (
+                        <span>{skill.experience}</span>
+                      )}
                     </button>
                   );
                 })}
