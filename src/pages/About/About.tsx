@@ -23,7 +23,7 @@ const About = () => {
   const [index, setIndex] = useState(-1);
 
   return (
-    <div className="about_wrapper">
+    <div className="about_wrapper fadeInUp">
       <div>
         <h1>About Me</h1>
         <PhotoAlbum

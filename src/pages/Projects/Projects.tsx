@@ -45,7 +45,7 @@ const Projects = () => {
   return (
     <div>
       <h1>Projects</h1>
-      <div className="project_wrapper">
+      <div className="project_wrapper fadeInUp">
         {projects.map((project, i) => (
           <CarouselItem
             key={i}

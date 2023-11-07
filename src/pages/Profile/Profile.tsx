@@ -24,12 +24,6 @@ const skills: skill[] = [
 const Profile = () => {
   const [hoveredSkillName, setHoveredSkillName] = useState<string>();
 
-  // const hoverStyle = hoveredSkillName
-  //   ? {
-  //       transform: "scale(1.1)", // Example hover style
-  //       transition: "transform 0.3s",
-  //     }
-  //   : {};
   return (
     <div className="profile_wrapper">
       <div className="photo_wrapper">

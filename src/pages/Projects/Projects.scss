@@ -2,6 +2,24 @@
 @import "../../_breakpoint";
 @import "../../_mixin";
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
 .project_wrapper {
   color: $font-color;
   height: 90%;
