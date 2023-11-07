@@ -80,6 +80,7 @@ const Projects = () => {
               padding: "3%",
               maxWidth: "80%",
               width: "50%",
+              height: "80%",
             }}
             className="modal"
           >
