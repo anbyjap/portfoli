@@ -22,8 +22,9 @@
 
 .project_wrapper {
   color: $font-color;
-  height: 90%;
+  // height: 90%;
   margin: 3% 0;
+  overflow-y: auto;
 
   .card {
     margin: 2% 0;
