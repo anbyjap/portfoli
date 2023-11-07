@@ -81,6 +81,7 @@ const Projects = () => {
               maxWidth: "80%",
               width: "50%",
             }}
+            className="modal"
           >
             <Carousel showThumbs={false} useKeyboardArrows={true}>
               {projects[expandedItemIndex]?.projectScreenshots?.map(

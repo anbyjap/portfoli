@@ -2,6 +2,33 @@
 @import "../../_breakpoint";
 @import "../../_mixin";
 
+.modal {
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  .carousel-root {
+    min-height: 30%;
+    .carousel {
+      height: 100%;
+    }
+  }
+}
+
+.modal::-webkit-scrollbar {
+  width: 20px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -37,7 +64,8 @@
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 
     // 480px以上 (タブレットサイズ) で2列
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, 400px);
+    grid-template-columns: repeat(2, minmax(300px, 500px));
     .media {
       height: 60%;
     }
@@ -49,12 +77,16 @@
     .expanded {
       // position: fixed;
       width: 80vw;
-      height: 90svh;
+      height: 90%;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       z-index: 1000;
+
+      .carousel-root {
+        height: 40%;
+      }
     }
   }
 
@@ -63,12 +95,6 @@
     gap: 10px;
 
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-
-    // hoverした時のエフェクト
-    // &:hover {
-    //   transform: translateY(-10px); // カードを少し上に動かす
-    //   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // 影をつけることで浮き上がって見えるようにする
-    // }
 
     // 1000px以上 (PCサイズ) で3列
     grid-template-columns: repeat(3, minmax(200px, 1fr));
@@ -81,18 +107,6 @@
     .hidden {
       display: none;
     }
-
-    // .expanded {
-    //   // position: fixed;
-    //   width: 80vw;
-    //   height: 90vh;
-    //   top: 0;
-    //   left: 0;
-    //   right: 0;
-    //   bottom: 0;
-    //   z-index: 1000;
-    //   // background-color: rgba(0, 0, 0, 0.7);  // 背景を半透明に
-    // }
   }
 
   .project_list {
